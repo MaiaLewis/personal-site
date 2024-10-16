@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maia Lewis Meza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="p-8">
+      <header class="max-w-[1200px] mx-auto flex justify-between">
+        <a href="index.html" class="font-bold text-lg uppercase tracking-wide"
+          >Maia Lewis Meza</a
+        >
+        <nav class="space-x-4">
+          <a href="#" class="hover:text-gray-300">LinkedIn</a>
+          <a href="#" class="hover:text-gray-300">Email</a>
+        </nav>
+      </header>
+    </div>
+
+    <main class="p-8">
+      <section class="max-w-[1200px] mx-auto">
+        <div class="bg-[#B7E7CB] text-white rounded-2xl text-lg mb-12">
+          <img
+            src="images/projects/quill1.svg"
+            class="px-8 md:px-24 pt-8 md:pt-12"
+          />
+        </div>
+
+        <div class="max-w-[800px] mx-auto text-lg leading-relaxed">
+          <h1 class="font-bold text-5xl mb-6">
+            Teaching computers how to write
+          </h1>
+          <div class="flex space-x-2 items-center text-gray-400 mb-6">
+            <div class="font-bold">Narrative Science</div>
+            <div>/</div>
+            <div>2015-2017</div>
+            <div>/</div>
+            <div>Product Designer</div>
+          </div>
+
+          <div class="space-y-6">
+            <p>
+              With the release of ChatGPT in November 2022, natural language
+              generation became a mainstream concept in ways I could never have
+              imagined. The seemingly effortless writing produced by today’s
+              large language models makes it easy to overlook the challenges we
+              faced while building a more rule-based engine at Narrative
+              Science. Yet, there's something enduringly relevant about the
+              transparency of the system we designed in 2016. Unlike large
+              statistical models, our platform wasn’t a black box—every output
+              could be traced back to a known ontological concept or a testable
+              analytic within our framework. This is the story of that platform:
+              Quill.
+            </p>
+            <h2 class="font-bold text-2xl">The business</h2>
+            <p>
+              <a
+                href="https://www.youtube.com/watch?v=bfC3rNmQXw8"
+                class="text-blue-500 hover:underline"
+                target="blank"
+                >Narrative Science</a
+              >
+              was founded in 2010 by two Northwestern University Computer
+              Science professors and their business partners. A handful of
+              graduate students had created a program that could generate short
+              recap stories about little league baseball games, given data such
+              as player names and scores.
+            </p>
+            <p>
+              The business opportunity became clear—every day we generate more
+              and more data that requires manpower to be analyzed and shared in
+              a meaningful way. The game summarizer served as a prototype for
+              the company’s first platform, Quill, which could be configured to
+              construct sentences and paragraphs based on structured data.
+            </p>
+            <p>
+              In November 2021, Narrative Science was acquired by Salesforce and
+              integrated into their sprawling teams and resources. However, when
+              I joined in early 2015, the company was about 70 people strong and
+              growing quickly. The majority of business came from financial
+              institutions wanting to automate their portfolio commentary. In a
+              traditional set up, financial advisors spend a significant amount
+              of time writing summaries of each client’s portfolio performance,
+              to be shared alongside graphs and charts on a quarterly basis. The
+              writing required is straightforward, based entirely on data, and
+              very routine. With Quill, they could generate summaries in seconds
+              that were accurate and indistinguishable from the human-crafted
+              alternative.
+            </p>
+            <h2 class="font-bold text-2xl">The premise of the new platform</h2>
+            <p>
+              I was hired to support the engineering team as they embarked on
+              creating the third version of the software. Quill, like many early
+              platforms, was designed almost entirely by engineers. While it
+              supported an impressive spread of clients and their use cases, it
+              was extremely complicated to configure and required an internal
+              professional services team to run and maintain each project.
+            </p>
+            <p>
+              The goal of the ambitious redesign was twofold: one, to make the
+              platform self-service with a simple and intuitive user experience,
+              and two, to transform the underlying representation from a rules
+              engine of text snippets and data transformations into an
+              intelligent combination of three separate things: the language
+              knowledge specific to a domain, the author’s communication goals
+              arranged into an outline, and the data requirements that would map
+              it to the source file or database.
+            </p>
+            <h2 class="font-bold text-2xl">The early user interface</h2>
+            <p>
+              The reimagined Quill user experience we designed had four primary
+              screens within the context of a project: the outline, the
+              ontology, the data requirements, and the live story.
+            </p>
+            <img src="images/projects/quill2.svg" class="my-4" />
+            <p>
+              Within the outline, the project author would arrange communication
+              goals. The goals were generalized, analytical statements, such as
+              “Present the attribute of an entity,” and “Compare the attribute
+              of entity 1 to entity 2.” The author would then configure these
+              goals with the specifics of the story—pulling language from the
+              project ontology—into statements like “Present the grade of the
+              student in 2015.”
+            </p>
+            <img src="images/projects/quill3.svg" class="my-4" />
+            <p>
+              The ontology stored the language settings specific to the project.
+              The author could create entities, such as a “student” and “class”,
+              relationships, such as “is enrolled in,” and attributes like
+              “name” and “ID”. These language settings included multiple
+              expressions, for example “high schooler” might be an alternative
+              to “student.” The ontology could be saved and shared to other
+              projects. We aspired to have language models for any imaginable
+              domain that an author could pull into their project from a global
+              knowledge base.
+            </p>
+            <img src="images/projects/quill4.svg" class="my-4" />
+            <p>
+              Within the data requirements, the author would map the entities
+              and attributes referenced in their outline to fields from a data
+              source. So for example, the names of students might be found in a
+              field called “full_name” from a table called “student_info”, while
+              their grade might be pulled from the field “final” in a table
+              called “BIO201_2015”.
+            </p>
+            <img src="images/projects/quill5.svg" class="my-4" />
+            <p>
+              Finally, the live story page would show the generated story. The
+              author could preview different versions by flipping the data
+              source or a high level filter. They also had the ability to edit
+              expressions, and resolve errors in line.
+            </p>
+            <p>
+              At a high level, the user interface borrowed from other creative
+              tools, where the body of the page reflected the state of the
+              project, and configuration and settings were handled in a set of
+              dynamic menus along the right. We designed many of these sidebars
+              to be accessible from multiple screens, for example, the menu for
+              editing an expression could be triggered from either the ontology
+              or the live story. While there were many screens to navigate, most
+              new users quickly understood the concept of the outline, how it
+              influenced the data requirements, and what to expect from the live
+              story page. The UI was successful in many ways, and for a
+              first-of-its-kind tool, had a relatively shallow learning curve.
+            </p>
+            <h2 class="font-bold text-2xl">Three years of learning</h2>
+            <p>
+              I learned more each day that I worked at Narrative Science than
+              during any other period in my career. What I learned at Narrative
+              Science could fill a library, but I have condensed the major
+              takeaways into the following three themes.
+            </p>
+
+            <p>
+              First, no matter how revolutionary the technology is, a product
+              must be designed for real people with a real use case. Our
+              reluctance to narrow our focus to a target customer and define our
+              product against their needs and motivations made it exceedingly
+              challenging to agree on our priorities. This eventually led to a
+              fairly dramatic product and leadership pivot.
+            </p>
+            <p>
+              Second, when designing new technology, it’s incredibly important
+              for teams to focus their creative energy on the unsolved problems.
+              Many of the experiences we designed in Quill had existing
+              solutions, and the time we spent reinventing them was time we
+              didn’t spend focusing on the problems that were truly unique to
+              our product.
+            </p>
+            <p>
+              And finally, great teamwork has magical properties—five people
+              with the right match of skills and team dynamics can accomplish
+              what 50 people can in the same amount of time. I am so thankful
+              for the exceptional people I had the opportunity to collaborate
+              with on Quill, but especially the other two members of the Design
+              trio, Andrew Paley and Sharon Chen.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="max-w-[800px] mx-auto flex justify-between mt-12">
+        <a href="patents.html" class="text-blue-500 hover:underline"
+          >← Previous</a
+        >
+        <a href="incubation.html" class="text-blue-500 hover:underline"
+          >Next →</a
+        >
+      </div>
+    </main>
+  </body>
+</html>

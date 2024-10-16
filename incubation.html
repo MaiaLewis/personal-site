@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maia Lewis Meza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="p-8">
+      <header class="max-w-[1200px] mx-auto flex justify-between">
+        <a href="index.html" class="font-bold text-lg uppercase tracking-wide"
+          >Maia Lewis Meza</a
+        >
+        <nav class="space-x-4">
+          <a href="#" class="hover:text-gray-300">LinkedIn</a>
+          <a href="#" class="hover:text-gray-300">Email</a>
+        </nav>
+      </header>
+    </div>
+
+    <main class="p-8">
+      <section class="max-w-[1200px] mx-auto">
+        <div class="bg-[#DDB5EC] text-white rounded-2xl text-lg mb-12">
+          <img
+            src="images/projects/incubation1.png"
+            class="px-8 md:px-24 pt-8 md:pt-12"
+          />
+        </div>
+
+        <div class="max-w-[800px] mx-auto text-lg leading-relaxed">
+          <h1 class="font-bold text-5xl mb-6">
+            Imagine a friendly conversation with your database
+          </h1>
+          <div class="flex space-x-2 items-center text-gray-400 mb-6">
+            <div class="font-bold">Narrative Science</div>
+            <div>/</div>
+            <div>2017-2018</div>
+            <div>/</div>
+            <div>Product Designer</div>
+          </div>
+          <div class="space-y-6">
+            <p>
+              Consider a database of shopping transactions. Within the millions
+              of hypothetical rows, a near-infinite amount of information can be
+              queried. You might simply want to know what dollar amount is
+              associated with a specific transaction ID, or perhaps you just
+              need the billing address. Slightly more complex, you could want to
+              know how many purchases a particular person made in May of last
+              year. Or the average amount associated with transactions made by
+              customers in Chicago, or by Amex cards, or in purchases that
+              included a white sweater.
+            </p>
+            <p>
+              In a typical organization, the curious party would submit a
+              request with an analyst, who would then—most likely days
+              later—write a SQL query, and return some amount of data that would
+              hopefully answer the question. But what if, instead of needing
+              someone to translate your curiosity into code, you could ask the
+              database directly? What if you could simply ask a question in
+              Slack and get an immediate answer. How would that change how we
+              use data? How would that impact decision making?
+            </p>
+            <p>
+              These were the questions that inspired our incubation project
+              concept. During my time at Narrative Science, the leadership team
+              initiated a quarterly rotating incubation team, where anyone
+              interested in participating could pitch an idea and, if chosen,
+              have 3 months (part-time) to create a prototype with the support
+              of a four person team. My pitch partner Clayton Norris and I were
+              given the inaugural project.
+            </p>
+            <p>
+              At the end of the 3 months we presented a live demo, using a real
+              data set from a prospective partner, the existing NLG platform,
+              and a few new pieces of entity recognition functionality.
+            </p>
+            <h2 class="font-bold text-2xl">Demo Highlights</h2>
+            <img src="images/projects/incubation2.png" class="shadow-lg" />
+            <p>
+              This question demonstrates that Quill 3 can be taught
+              superlatives, and know which data type corresponds with that
+              superlative. In this case "best selling" is associated with the
+              attribute "sales" and points to a field in the data called
+              "amount".
+            </p>
+            <img src="images/projects/incubation3.png" class="shadow-lg" />
+            <p>
+              In the above question, the platform tracked the most salient
+              entity in the conversation, identifying that the pronoun "it" in
+              this question refers to "Reaver FY13."
+            </p>
+            <img src="images/projects/incubation4.png" class="shadow-lg" />
+            <p>
+              When asked a comparison question, Quill was able to filter to
+              headsets with prices above a threshold.
+            </p>
+            <img src="images/projects/incubation5.png" class="shadow-lg" />
+            <p>
+              Finally, Quill determined the intent of this question to be a
+              comparison between two time periods, and is able to provide a
+              summary that includes the absolute difference, percent difference,
+              and revenue amount from each year.
+            </p>
+            <p>
+              Narrative Science patented the technology, which is now owned by
+              Salesforce, and Slack! The incredible team I worked with: Clayton
+              Norris, Mike Smathers, Nate Nichols, and Dan Platt. The project
+              would not have been possible without the ideas of Andrew Paley and
+              David Huang.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="max-w-[800px] mx-auto flex justify-between mt-12">
+        <a href="quill.html" class="text-blue-500 hover:underline"
+          >← Previous</a
+        >
+        <a href="research.html" class="text-blue-500 hover:underline">Next →</a>
+      </div>
+    </main>
+  </body>
+</html>

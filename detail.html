@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maia Lewis Meza - Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="p-8">
+      <header class="max-w-[1200px] mx-auto flex justify-between">
+        <a href="index.html" class="font-bold text-lg uppercase tracking-wide">Maia Lewis Meza</a>
+        <nav class="space-x-4">
+          <a href="#" class="hover:text-gray-300">LinkedIn</a>
+          <a href="#" class="hover:text-gray-300">Email</a>
+        </nav>
+      </header>
+    </div>
+
+    <main class="p-8">
+      <section class="max-w-[1200px] mx-auto">
+        <!-- Section 1 -->
+        <div
+          class="bg-[#282741] text-white rounded-2xl p-12 text-lg mb-12 h-[300px]"
+        ></div>
+
+        <div class="max-w-[800px] mx-auto text-lg leading-relaxed">
+          <h1 class="font-bold text-5xl mb-12">
+            Teaching computers how to write
+          </h1>
+          <div class="space-y-6">
+            <p>
+              If the sales summary above sounds a bit odd, that’s because it was
+              written by an early version of Quill3, the Natural Language
+              Generation (NLG) platform I worked on during my three years at
+              Narrative Science. In 2016, a team of twelve engineers and two
+              designers—myself included—were on a quest to programmatically
+              represent the endless flexibility of language in a useful and
+              meaningful way. A few additional rules like “don’t start a
+              sentence with a number” and “don’t use a pronoun when defining a
+              group” would improve the coherence of the sentences above, but in
+              late 2016, we were thrilled to say our platform could write this
+              summary with only a small amount of configuration.
+            </p>
+            <p>
+              The business Narrative Science was founded in 2010 by two
+              Northwestern University Computer Science professors and their
+              business partners. A handful of graduate students had created a
+              program that could generate short recap stories about little
+              league baseball games, given data such as player names and scores.
+            </p>
+            <p>
+              The business opportunity became clear—every day we generate more
+              and more data that requires manpower to be analyzed and shared in
+              a meaningful way. The game summarizer served as a prototype for
+              the company’s first platform, Quill, which could be configured to
+              construct sentences and paragraphs based on structured data.
+            </p>
+            <p>
+              As of November 2021, Narrative Science has been acquired by
+              Salesforce and joined the ranks of startup success stories.
+              However, when I joined in early 2015, the company was about 70
+              people strong and growing quickly. The majority of business came
+              from financial institutions wanting to automate their portfolio
+              commentary. In a traditional set up, financial advisors spend a
+              significant amount of time writing summaries of each client’s
+              portfolio performance, to be shared alongside graphs and charts on
+              a quarterly basis. The writing required is straightforward, based
+              entirely on data, and very routine. With Quill, they could
+              generate summaries in seconds that were accurate and
+              indistinguishable from the human-crafted alternative. The premise
+              of the new platform I was hired to support the engineering team as
+              they embarked on creating the third version of the software.
+              Quill, like many early platforms, was designed almost entirely by
+              engineers. While it supported an impressive spread of clients and
+              their use cases, it was extremely complicated to configure and
+              required an internal professional services team to run and
+              maintain each project. The goal of the ambitious redesign was
+              twofold: one, to make the platform self-service with a simple and
+              intuitive user experience, and two, to transform the underlying
+              representation from a rules engine of text snippets and data
+              transformations into an intelligent combination of three separate
+              things: the language knowledge specific to a domain, the author’s
+              communication goals arranged into an outline, and the data
+              requirements that would map it to the source file or database. The
+              early user interface The Quill 3 experience we designed had four
+              primary screens within the context of a project: the outline, the
+              ontology, the data requirements, and the live story. Within the
+              outline, the project author would arrange communication goals. The
+              goals were generalized, analytical statements, such as “Present
+              the attribute of an entity,” and “Compare the attribute of entity
+              1 to entity 2.” The author would then configure these goals with
+              the specifics of the story—pulling language from the project
+              ontology—into statements like “Present the grade of the student in
+              2015.” The ontology stored the language settings specific to the
+              project. The author could create entities, such as a “student” and
+              “class”, relationships, such as “is enrolled in,” and attributes
+              like “name” and “ID”. These language settings included multiple
+              expressions, for example “high schooler” might be an alternative
+              to “student.” The ontology could be saved and shared to other
+              projects. We aspired to have language models for any imaginable
+              domain that an author could pull into their project from a global
+              knowledge base. Within the data requirements, the author would map
+              the entities and attributes referenced in their outline to fields
+              from a data source. So for example, the names of students might be
+              found in a field called “full_name” from a table called
+              “student_info”, while their grade might be pulled from the field
+              “final” in a table called “BIO201_2015”. Finally, the live story
+              page would show the generated story. The author could preview
+              different versions by flipping the data source or a high level
+              filter. They also had the ability to edit expressions, and resolve
+              errors in line. At a high level, the user interface borrowed from
+              other creative tools, where the body of the page reflected the
+              state of the project, and configuration and settings were handled
+              in a set of dynamic menus along the right. We designed many of
+              these sidebars to be accessible from multiple screens, for
+              example, the menu for editing an expression could be triggered
+              from either the ontology or the live story. While there were many
+              screens to navigate, most new users quickly understood the concept
+              of the outline, how it influenced the data requirements, and what
+              to expect from the live story page. The UI was successful in many
+              ways, and for a first-of-its-kind tool, had a relatively shallow
+              learning curve. Experiments in code A year or so into working
+              primarily with engineers, I was feeling both inspired by my
+              colleagues and limited in my ability to express new design ideas.
+              I started tinkering in code. I learned the basics of Python from a
+              book, the nuts and bolts of running code in a development
+              environment from anyone who had time, and the fundamentals of
+              javascript and front-end frameworks from my ever patient manager,
+              Andrew Paley. At the time, two aspects of the platform were in
+              dire need of usability improvement. First, language configuration
+              was quite complex. The author had to recall a significant amount
+              of grade-school grammar in order to understand how to use Quill’s
+              expression settings. I wanted the platform to leverage NLP
+              (Natural Language Processing) as a way to automatically extract
+              the language preferences, so that the author wasn’t required to
+              provide things like past participles and prepositions. The second,
+              more complex, challenge was both a usability and core
+              functionality shortcoming. Quill’s underlying model was designed
+              so that an attribute could only be filtered by the entity it was
+              associated with, and a timeframe. Sometimes, that was all that was
+              necessary. For example, if the author wanted to write about the
+              height of different basketball players. Often, however, we ran
+              into challenges expressing values that had multiple filterable
+              dimensions. For example, if the author wanted to express the
+              number of points scored by a certain player from behind the
+              three-point line. In that scenario, Quill would be unable to
+              appropriately express the attribute (points) because it was
+              associated with both a player and a distance from the basket. I
+              wanted to see Quill support more complex filtering functionality,
+              and use a graph to visualize the language model. With my nascent
+              skills, I started exploring solutions to these design challenges.
+              My first ever working prototype allowed an author to “teach” Quill
+              by writing short phrases in natural language, as if they were
+              explaining their domain to someone totally unfamiliar. The second
+              prototype used graphs to visualize mulit-dimension relationships.
+              The author would create a relationship of entities in a graph, and
+              select the appropriate language to express their relationship
+              correctly. They could then select preconfigured analysis
+              statements in the write tab to build their story. Interact with
+              the prototype here (it will definitely break) While these concepts
+              never made it into production, they inspired several first-place
+              hackathon projects, and influenced the collective mindshare of the
+              team. Three years of learning I learned more each day that I
+              worked at Narrative Science than during any other period in my
+              career. What I learned at Narrative Science could fill a library,
+              but I have condensed the major takeaways into the following three
+              themes. First, no matter how revolutionary the technology is, a
+              product must be designed for real people with a real use case. Our
+              reluctance to narrow our focus to a target customer and define our
+              product against their needs and motivations made it exceedingly
+              challenging to agree on our priorities. This eventually led to a
+              fairly dramatic product and leadership pivot. Second, when
+              designing new technology, it’s incredibly important for teams to
+              focus their creative energy on the unsolved problems. Many of the
+              experiences we designed in Quill 3 had existing solutions, and the
+              time we spent reinventing them was time we didn’t spend focusing
+              on the problems that were truly unique to our product. And
+              finally, great teamwork has magical properties—five people with
+              the right match of skills and team dynamics can accomplish what 50
+              people can in the same amount of time. I am so thankful for the
+              exceptional people I had the opportunity to collaborate with on
+              Quill 3, but especially the other two members of the Design trio,
+              Andrew Paley and Sharon Chen.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
